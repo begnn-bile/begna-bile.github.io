@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Begna Bile Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="image/favicon.ico">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">BB</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-buttons">
+        <button onclick="toggleTheme()" class="theme-toggle">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button onclick="toggleMusic()" class="music-toggle">
+          <i class="fas fa-music"></i>
+        </button>
+        <a href="#contact" class="cta-button">Get in Touch</a>
+        <a href="files/cv.pdf" class="download-btn" download>Download CV</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Audio Player -->
+  <div class="audio-player">
+    <audio id="background-music" loop>
+      <source src="music/background.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <div class="audio-controls">
+      <button onclick="toggleMusic()" class="music-btn">
+        <i class="fas fa-music"></i>
+      </button>
+      <input type="range" id="volume-control" min="0" max="1" step="0.1" value="0.5">
+    </div>
+  </div>
+
+  <main class="main-content">
+    <!-- Hero section -->
+    <section class="hero" id="home">
+      <div class="hero-images">
+        <img src="image/profilic.jpg" alt="Profile Picture" class="profile-pic">
+        <div class="tech-icons">
+          <img src="image/oracle-icon.png" alt="Oracle" class="tech-icon animate-float">
+          <img src="image/python-icon.png" alt="Python" class="tech-icon animate-float delay-1">
+          <img src="image/sql-icon.png" alt="SQL" class="tech-icon animate-float delay-2">
+        </div>
+      </div>
+      <div class="hero-content">
+        <h1>Hi, I'm <span class="highlight">Begna Bile</span></h1>
+        <h2>BI Developer & Electrical and Computer Engineer</h2>
+        <p>I specialize in creating smart systems and BI solutions that drive business growth.</p>
+      </div>
+    </section>
+
+    <!-- About section -->
+    <section id="about">
+      <div class="about-content">
+        <h2>About Me</h2>
+        <p>I am a passionate BI Developer and Electrical and Computer Engineer with expertise in Oracle Database Administration and Development. My journey in technology has been driven by a deep interest in data analytics and system optimization.</p>
+        <p>With a strong foundation in both hardware and software, I bring a unique perspective to solving complex problems. I specialize in creating efficient database solutions and developing business intelligence tools that help organizations make data-driven decisions.</p>
+        <p>My approach combines technical excellence with creative problem-solving, ensuring that every solution I deliver is both robust and user-friendly.</p>
+      </div>
+    </section>
+
+    <!-- Three Column Layout -->
+    <div class="three-columns">
+      <!-- Skills Column -->
+      <div class="column">
+        <h2>Skills</h2>
+        <div class="skills-container">
+          <div class="skill-card">
+            <i class="fab fa-html5 fa-3x"></i>
+            <h3>HTML5</h3>
+          </div>
+          <div class="skill-card">
+            <i class="fab fa-css3-alt fa-3x"></i>
+            <h3>CSS3</h3>
+          </div>
+          <div class="skill-card">
+            <i class="fab fa-js fa-3x"></i>
+            <h3>JavaScript</h3>
+          </div>
+          <div class="skill-card">
+            <i class="fab fa-react fa-3x"></i>
+            <h3>React</h3>
+          </div>
+          <div class="skill-card">
+            <i class="fas fa-database fa-3x"></i>
+            <h3>Oracle DB</h3>
+          </div>
+          <div class="skill-card">
+            <i class="fas fa-network-wired fa-3x"></i>
+            <h3>Networking</h3>
+          </div>
+          <div class="skill-card">
+            <i class="fas fa-database fa-3x"></i>
+            <h3>SQL</h3>
+          </div>
+          <div class="skill-card">
+            <i class="fas fa-code fa-3x"></i>
+            <h3>PL/SQL</h3>
+          </div>
+          <div class="skill-card">
+            <i class="fab fa-python fa-3x"></i>
+            <h3>Python</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projects Column -->
+      <div class="column">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <i class="fas fa-door-open fa-4x"></i>
+            <h3>IoT Smart Door System</h3>
+            <p>Designed a smart IoT-based home door security system.</p>
+            <a href="#" class="project-link">View Project</a>
+          </div>
+          <div class="project-card">
+            <i class="fas fa-chart-line fa-4x"></i>
+            <h3>Internal BI Reporting</h3>
+            <p>Developed Oracle BI reports and dashboards for Siinqee Bank.</p>
+            <a href="#" class="project-link">View Report</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications Column -->
+      <div class="column">
+        <h2>Certifications</h2>
+        <div class="certifications-grid">
+          <div class="certification-card">
+            <i class="fas fa-certificate fa-4x"></i>
+            <div class="certification-content">
+              <h3>Oracle 19C DBA</h3>
+              <p>Certified Database Administrator</p>
+              <a href="files/oracle-cert.pdf" download class="certification-link">View</a>
+            </div>
+          </div>
+          <div class="certification-card">
+            <i class="fas fa-certificate fa-4x"></i>
+            <div class="certification-content">
+              <h3>PL/SQL Developer</h3>
+              <p>Advanced PL/SQL programming</p>
+              <a href="files/plsql-cert.pdf" download class="certification-link">View</a>
+            </div>
+          </div>
+          <div class="certification-card">
+            <i class="fas fa-certificate fa-4x"></i>
+            <div class="certification-content">
+              <h3>Financial Inclusion</h3>
+              <p>Fintech and banking solutions</p>
+              <a href="files/finance-cert.pdf" download class="certification-link">View</a>
+            </div>
+          </div>
+          <div class="certification-card">
+            <i class="fas fa-certificate fa-4x"></i>
+            <div class="certification-content">
+              <h3>Data Analytics</h3>
+              <p>Advanced data analysis techniques</p>
+              <a href="files/data-analytics-cert.pdf" download class="certification-link">View</a>
+            </div>
+          </div>
+          <div class="certification-card">
+            <i class="fas fa-certificate fa-4x"></i>
+            <div class="certification-content">
+              <h3>Google Digital Marketing</h3>
+              <p>Digital marketing strategies</p>
+              <a href="files/google-marketing-cert.pdf" download class="certification-link">View</a>
+            </div>
+          </div>
+          <div class="certification-card">
+            <i class="fas fa-certificate fa-4x"></i>
+            <div class="certification-content">
+              <h3>AI Fundamentals</h3>
+              <p>Artificial Intelligence basics</p>
+              <a href="files/ai-fundamentals-cert.pdf" download class="certification-link">View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact section -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <div class="contact-info">
+        <div class="contact-card">
+          <i class="fas fa-phone"></i>
+          <div class="contact-details">
+            <h3>Phone</h3>
+            <a href="tel:+251935443209">+251 935 443 209</a>
+          </div>
+        </div>
+        <div class="contact-card">
+          <i class="fas fa-envelope"></i>
+          <div class="contact-details">
+            <h3>Email</h3>
+            <a href="mailto:begnabile123@gmail.com">begnabile123@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-card">
+          <i class="fab fa-telegram"></i>
+          <div class="contact-details">
+            <h3>Telegram</h3>
+            <a href="https://t.me/begnab" target="_blank">@begnab</a>
+          </div>
+        </div>
+        <div class="contact-card">
+          <i class="fab fa-linkedin"></i>
+          <div class="contact-details">
+            <h3>LinkedIn</h3>
+            <a href="https://www.linkedin.com/in/begna-bile-35b897211" target="_blank">Begna Bile</a>
+          </div>
+        </div>
+        <div class="contact-card">
+          <i class="fab fa-github"></i>
+          <div class="contact-details">
+            <h3>GitHub</h3>
+            <a href="https://github.com/begnn-bile" target="_blank">begnn-bile</a>
+          </div>
+        </div>
+      </div>
+      <form id="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Begna Bile. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
