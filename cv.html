@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Begna Bile Beyene - Professional CV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --primary-light: #34495e;
+            --secondary-color: #3498db;
+            --accent-color: #2980b9;
+            --text-color: #2c3e50;
+            --text-light: #7f8c8d;
+            --background: #ecf0f1;
+            --card-bg: #ffffff;
+            --white: #ffffff;
+            --border-radius: 12px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --gradient-1: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            --gradient-2: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            --gradient-3: linear-gradient(135deg, #ecf0f1 0%, #bdc3c7 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: linear-gradient(135deg, #ecf0f1 0%, #bdc3c7 100%);
+            font-size: 0.85rem;
+        }
+
+        .container {
+            max-width: 29.7cm;
+            margin: 2rem auto;
+            padding: 0;
+            background: var(--background);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: var(--border-radius);
+            height: 21cm;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cv-content {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            grid-template-rows: auto 1fr;
+            height: 100%;
+        }
+
+        .cv-header {
+            grid-column: 1 / -1;
+            background: var(--gradient-1);
+            color: var(--white);
+            padding: 1rem;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cv-header-top {
+            flex: 1;
+        }
+
+        .cv-header-bottom {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .profile-circle {
+            width: 100px;
+            height: 100px;
+        }
+
+        .contact-info-vertical {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .sidebar {
+            padding: 1rem;
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        .main-content {
+            padding: 1rem;
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        .cv-section {
+            margin-bottom: 0.5rem;
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: visible;
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .section-title {
+            font-size: 0.85rem;
+            padding: 0.4rem 0.6rem;
+            margin-bottom: 0.3rem;
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .section-content {
+            padding: 0.6rem;
+            font-size: 0.75rem;
+            background: var(--white);
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .experience-item {
+            margin-bottom: 0.5rem;
+            padding: 0.5rem;
+            background: var(--white);
+            border-radius: var(--border-radius);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .experience-date {
+            font-size: 0.65rem;
+            padding: 0.2rem 0.4rem;
+        }
+
+        .experience-title {
+            font-size: 0.8rem;
+        }
+
+        .experience-company {
+            font-size: 0.7rem;
+        }
+
+        .skills-grid, .projects-grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.5rem;
+        }
+
+        .skill-item, .project-item {
+            padding: 0.4rem;
+            font-size: 0.7rem;
+            background: var(--white);
+            border-radius: var(--border-radius);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .experience-highlight {
+            padding: 0.8rem;
+            background: var(--white);
+            border-radius: var(--border-radius);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .experience-highlight li {
+            padding: 0.4rem;
+            font-size: 0.75rem;
+            margin-bottom: 0.3rem;
+            background: var(--white);
+            border-radius: var(--border-radius);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        @media print {
+            @page {
+                size: A4 landscape;
+                margin: 0;
+            }
+            
+            body {
+                background: white;
+                font-size: 9pt;
+                line-height: 1.2;
+                margin: 0;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                margin: 0;
+                padding: 0;
+                height: 21cm;
+                width: 29.7cm;
+            }
+            
+            .cv-content {
+                display: grid;
+                grid-template-columns: 1fr 1.5fr;
+                height: 100%;
+            }
+            
+            .cv-header {
+                padding: 0.5cm;
+            }
+            
+            .cv-header h1 {
+                font-size: 18pt;
+            }
+            
+            .cv-header h2 {
+                font-size: 12pt;
+            }
+            
+            .profile-circle {
+                width: 2.5cm;
+                height: 2.5cm;
+            }
+            
+            .sidebar, .main-content {
+                padding: 0.5cm;
+            }
+            
+            .section-title {
+                font-size: 10pt;
+                padding: 0.3cm;
+            }
+            
+            .section-content {
+                font-size: 9pt;
+                padding: 0.3cm;
+            }
+            
+            .experience-item {
+                margin-bottom: 0.3cm;
+                padding: 0.3cm;
+            }
+            
+            .experience-title {
+                font-size: 10pt;
+            }
+            
+            .experience-company {
+                font-size: 9pt;
+            }
+            
+            .experience-date {
+                font-size: 8pt;
+            }
+            
+            .skills-grid, .projects-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 0.2cm;
+            }
+            
+            .skill-item, .project-item {
+                padding: 0.2cm;
+                font-size: 8pt;
+            }
+            
+            .experience-highlight {
+                padding: 0.5cm;
+            }
+            
+            .experience-highlight li {
+                padding: 0.3cm;
+                font-size: 8pt;
+                margin-bottom: 0.2cm;
+            }
+            
+            * {
+                position: static !important;
+                transform: none !important;
+                animation: none !important;
+                transition: none !important;
+                opacity: 1 !important;
+                visibility: visible !important;
+            }
+        }
+
+        .action-buttons {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            display: flex;
+            gap: 0.75rem;
+            z-index: 100;
+        }
+
+        .action-button {
+            background: var(--gradient-1);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 2rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .action-button::after {
+            display: none;
+        }
+
+        .action-button:hover {
+            transform: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .action-button i {
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .cv-content {
+                grid-template-columns: 1fr;
+            }
+
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+
+            .action-buttons {
+                position: static;
+                justify-content: center;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+        }
+
+        /* Improved education styling */
+        .education-item {
+            margin-bottom: 0.5rem;
+            padding: 0.5rem;
+            background: var(--white);
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+        
+        .education-item:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+        
+        .education-degree {
+            font-weight: 600;
+            font-size: 0.8rem;
+            color: var(--text-color);
+        }
+        
+        .education-school {
+            font-size: 0.7rem;
+            color: var(--text-light);
+        }
+        
+        .education-date {
+            font-size: 0.65rem;
+            color: var(--primary-color);
+            margin-top: 0.25rem;
+        }
+
+        /* Button animations */
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 98, 204, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(0, 98, 204, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 98, 204, 0);
+            }
+        }
+        
+        .action-button {
+            animation: pulse 2s infinite;
+        }
+        
+        .action-button:hover {
+            animation: none;
+        }
+
+        /* Add smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Add loading animation for PDF download */
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+        }
+
+        .loading.show {
+            opacity: 1;
+        }
+
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid var(--white);
+            border-top-color: var(--primary-color);
+            border-radius: 50%;
+        }
+
+        .section-title::before {
+            display: none;
+        }
+
+        .cv-section.full-width {
+            grid-column: 1 / -1;
+            margin-top: 1.5rem;
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
+        }
+
+        .experience-highlight {
+            margin-top: 0;
+            padding: 1.5rem;
+            background: var(--white);
+            border-radius: var(--border-radius);
+            font-size: 0.9rem;
+            border-left: 4px solid var(--primary-color);
+            color: var(--text-color);
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .experience-highlight ul {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .experience-highlight li {
+            min-width: auto;
+        }
+
+        .experience-highlight li::before {
+            content: "→";
+            position: absolute;
+            left: 0.5rem;
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cv-content">
+            <div class="cv-header">
+                <div class="cv-header-top">
+                    <h1>Begna Bile Beyene</h1>
+                    <h2>BI Developer & Electrical and Computer Engineer</h2>
+                </div>
+                <div class="cv-header-bottom">
+                    <div class="profile-circle">
+                        <img src="image/profilic.jpg" alt="Profile Picture" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                    </div>
+                    <div class="contact-info-vertical">
+                        <a href="tel:+251935443209"><i class="fas fa-phone"></i> +251 935 443 209</a>
+                        <a href="mailto:begnabile123@gmail.com"><i class="fas fa-envelope"></i> begnabile123@gmail.com</a>
+                        <a href="https://www.linkedin.com/in/begna-bile-35b897211"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="cv-section">
+                    <div class="section-title">
+                        <i class="fas fa-user-tie"></i> Professional Summary
+                    </div>
+                    <div class="section-content">
+                        <p>Experienced Oracle Database Administrator and BI Developer with expertise in PL/SQL development, database optimization, and performance tuning. Skilled in designing and implementing comprehensive BI solutions, creating complex SQL scripts, and managing database administration tasks. Proficient in data analysis, visualization, and system integration to deliver efficient and scalable business intelligence solutions.</p>
+                    </div>
+                </div>
+
+                <div class="cv-section">
+                    <div class="section-title">
+                        <i class="fas fa-graduation-cap"></i> Education
+                    </div>
+                    <div class="section-content">
+                        <div class="education-item">
+                            <div class="education-degree">BSc in Electrical and Computer Engineering</div>
+                            <div class="education-school">Addis Ababa University</div>
+                            <div class="education-date">2018 - 2022</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cv-section">
+                    <div class="section-title">
+                        <i class="fas fa-code"></i> Skills
+                    </div>
+                    <div class="section-content">
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <i class="fas fa-database"></i>
+                                <span>Oracle DB</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-code"></i>
+                                <span>PL/SQL</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-python"></i>
+                                <span>Python</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-network-wired"></i>
+                                <span>Networking</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Data Analysis</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-chart-bar"></i>
+                                <span>Data Visualization</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cv-section">
+                    <div class="section-title">
+                        <i class="fas fa-project-diagram"></i> Projects
+                    </div>
+                    <div class="section-content">
+                        <div class="projects-grid">
+                            <div class="project-item">
+                                <h4 class="project-title">Internal BI Reporting</h4>
+                                <p>Comprehensive BI reports for internal business analysis</p>
+                            </div>
+                            <div class="project-item">
+                                <h4 class="project-title">Database Optimization</h4>
+                                <p>Performance improvements in database systems</p>
+                            </div>
+                            <div class="project-item">
+                                <h4 class="project-title">Payment Integration</h4>
+                                <p>Payment system integrations development</p>
+                            </div>
+                            <div class="project-item">
+                                <h4 class="project-title">Network Infrastructure</h4>
+                                <p>Secure network infrastructure design</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-content">
+                <div class="cv-section">
+                    <div class="section-title">
+                        <i class="fas fa-briefcase"></i> Work Experience
+                    </div>
+                    <div class="section-content">
+                        <div class="experience-item">
+                            <div class="experience-date">February 1, 2025 – Present</div>
+                            <div class="experience-title">ASSOCIATE BUSINESS INTELLIGENCE DEVELOPER</div>
+                            <div class="experience-company">SIINQEE BANK S.C, Addis Ababa, Ethiopia</div>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="experience-date">July 8, 2024 – January 31, 2025</div>
+                            <div class="experience-title">JUNIOR BI DEVELOPER</div>
+                            <div class="experience-company">SIINQEE BANK S.C, Addis Ababa, Ethiopia</div>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="experience-date">January 1, 2024 – July 7, 2024</div>
+                            <div class="experience-title">JUNIOR PAYMENT AND SYSTEM ADMINISTRATOR</div>
+                            <div class="experience-company">SIINQEE BANK S.C, Addis Ababa, Ethiopia</div>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="experience-date">December 9, 2022 – December 30, 2023</div>
+                            <div class="experience-title">GRADUATE TRAINEE IT</div>
+                            <div class="experience-company">SIINQEE BANK S.C, Addis Ababa, Ethiopia</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cv-section full-width">
+                <div class="section-title">
+                    <i class="fas fa-trophy"></i> Key Responsibilities & Achievements
+                </div>
+                <div class="section-content">
+                    <div class="experience-highlight">
+                        <ul>
+                            <li>Developed and maintained comprehensive BI solutions and reports for business analysis</li>
+                            <li>Optimized database performance and implemented efficient PL/SQL solutions</li>
+                            <li>Designed and implemented payment system integrations and monitoring solutions</li>
+                            <li>Managed system administration tasks and ensured security compliance</li>
+                            <li>Collaborated with cross-functional teams to deliver data-driven solutions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="action-buttons">
+        <button class="action-button" onclick="handlePrint()">
+            <i class="fas fa-print"></i> Print CV
+        </button>
+        <button class="action-button" onclick="downloadCV()">
+            <i class="fas fa-download"></i> Download CV
+        </button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        function downloadCV() {
+            const loading = document.createElement('div');
+            loading.className = 'loading';
+            loading.innerHTML = '<div class="loading-spinner"></div>';
+            document.body.appendChild(loading);
+            loading.classList.add('show');
+
+            const element = document.querySelector('.container');
+            
+            const opt = {
+                margin: 0,
+                filename: 'Begna_Bile_Beyene_CV.pdf',
+                image: { 
+                    type: 'jpeg', 
+                    quality: 1,
+                    useCORS: true
+                },
+                html2canvas: { 
+                    scale: 1,
+                    useCORS: true,
+                    logging: true,
+                    letterRendering: true,
+                    allowTaint: true,
+                    foreignObjectRendering: true,
+                    scrollX: 0,
+                    scrollY: 0,
+                    width: 1123,
+                    height: 794,
+                    backgroundColor: '#ffffff',
+                    onclone: function(clonedDoc) {
+                        clonedDoc.querySelectorAll('*').forEach(el => {
+                            el.style.visibility = 'visible';
+                            el.style.opacity = '1';
+                            el.style.transform = 'none';
+                            el.style.position = 'static';
+                            el.style.display = 'block';
+                            el.style.overflow = 'visible';
+                            el.style.height = 'auto';
+                            el.style.minHeight = '0';
+                            el.style.maxHeight = 'none';
+                        });
+                        
+                        const container = clonedDoc.querySelector('.container');
+                        if (container) {
+                            container.style.width = '1123px';
+                            container.style.height = '794px';
+                            container.style.margin = '0';
+                            container.style.padding = '0';
+                            container.style.overflow = 'visible';
+                            container.style.position = 'static';
+                        }
+                        
+                        const cvContent = clonedDoc.querySelector('.cv-content');
+                        if (cvContent) {
+                            cvContent.style.width = '100%';
+                            cvContent.style.height = '100%';
+                            cvContent.style.display = 'grid';
+                            cvContent.style.gridTemplateColumns = '1fr 1.5fr';
+                            cvContent.style.gridTemplateRows = 'auto 1fr';
+                            cvContent.style.gap = '0.5rem';
+                            cvContent.style.position = 'static';
+                        }
+                    }
+                },
+                jsPDF: { 
+                    unit: 'mm', 
+                    format: 'a4', 
+                    orientation: 'landscape',
+                    compress: true
+                }
+            };
+
+            html2pdf().set(opt).from(element).save().then(() => {
+                loading.classList.remove('show');
+                setTimeout(() => {
+                    document.body.removeChild(loading);
+                }, 300);
+            }).catch((error) => {
+                console.error('Error generating PDF:', error);
+                alert('Error generating PDF. Please try again.');
+                loading.classList.remove('show');
+                setTimeout(() => {
+                    document.body.removeChild(loading);
+                }, 300);
+            });
+        }
+
+        function handlePrint() {
+            setupPrintStyles();
+            
+            document.querySelectorAll('*').forEach(el => {
+                el.style.transition = 'none !important';
+                el.style.animation = 'none !important';
+                el.style.transform = 'none !important';
+                el.style.position = 'static !important';
+                el.style.opacity = '1 !important';
+                el.style.visibility = 'visible !important';
+            });
+            
+            document.querySelectorAll('.cv-section, .experience-item, .skill-item, .project-item').forEach(el => {
+                el.style.opacity = '1';
+                el.style.visibility = 'visible';
+                el.style.display = 'block';
+                el.style.position = 'static';
+                el.style.transform = 'none';
+            });
+            
+            window.print();
+            
+            setTimeout(() => {
+                document.querySelectorAll('*').forEach(el => {
+                    el.style.transition = '';
+                    el.style.animation = '';
+                    el.style.transform = '';
+                    el.style.position = '';
+                });
+            }, 1000);
+        }
+
+        function setupPrintStyles() {
+            const printStyles = `
+                @media print {
+                    @page {
+                        size: A4 landscape;
+                        margin: 0;
+                    }
+                    
+                    body {
+                        background: white !important;
+                        font-size: 9pt !important;
+                        margin: 0 !important;
+                        padding: 0 !important;
+                    }
+                    
+                    .container {
+                        box-shadow: none !important;
+                        margin: 0 !important;
+                        padding: 0 !important;
+                        width: 100% !important;
+                        height: 100% !important;
+                        position: static !important;
+                        transform: none !important;
+                    }
+                    
+                    .cv-content {
+                        display: grid !important;
+                        grid-template-columns: 1fr 1.5fr !important;
+                        gap: 1rem !important;
+                        position: static !important;
+                        transform: none !important;
+                    }
+                    
+                    .cv-header {
+                        padding: 0.5cm !important;
+                        margin-bottom: 0.5cm !important;
+                        position: static !important;
+                        transform: none !important;
+                    }
+                    
+                    .cv-header h1 {
+                        font-size: 18pt !important;
+                        margin-bottom: 0.3cm !important;
+                    }
+                    
+                    .cv-header h2 {
+                        font-size: 12pt !important;
+                        margin-bottom: 0.3cm !important;
+                    }
+                    
+                    .profile-circle {
+                        width: 2.5cm !important;
+                        height: 2.5cm !important;
+                        position: static !important;
+                        transform: none !important;
+                    }
+                    
+                    .contact-info-vertical {
+                        font-size: 9pt !important;
+                        position: static !important;
+                        transform: none !important;
+                    }
+                    
+                    .section-title {
+                        font-size: 10pt !important;
+                        padding: 0.3cm !important;
+                        position: static !important;
+                        transform: none !important;
+                        opacity: 1 !important;
+                        visibility: visible !important;
+                    }
+                    
+                    .section-content {
+                        font-size: 9pt !important;
+                        padding: 0.3cm !important;
+                        position: static !important;
+                        transform: none !important;
+                        opacity: 1 !important;
+                        visibility: visible !important;
+                    }
+                    
+                    .experience-item {
+                        page-break-inside: avoid !important;
+                        margin-bottom: 0.3cm !important;
+                        position: static !important;
+                        transform: none !important;
+                        opacity: 1 !important;
+                        visibility: visible !important;
+                    }
+                    
+                    .experience-title {
+                        font-size: 10pt !important;
+                    }
+                    
+                    .experience-company {
+                        font-size: 9pt !important;
+                    }
+                    
+                    .experience-date {
+                        font-size: 8pt !important;
+                    }
+                    
+                    .skills-grid {
+                        grid-template-columns: repeat(3, 1fr) !important;
+                    }
+                    
+                    .projects-grid {
+                        grid-template-columns: repeat(3, 1fr) !important;
+                    }
+                    
+                    .action-buttons {
+                        display: none !important;
+                    }
+                    
+                    .experience-highlight li {
+                        page-break-inside: avoid !important;
+                        margin-bottom: 0.2cm !important;
+                        opacity: 1 !important;
+                        visibility: visible !important;
+                    }
+                    
+                    * {
+                        position: static !important;
+                        transform: none !important;
+                        animation: none !important;
+                        transition: none !important;
+                        opacity: 1 !important;
+                        visibility: visible !important;
+                    }
+                }
+            `;
+            
+            const styleSheet = document.createElement("style");
+            styleSheet.type = "text/css";
+            styleSheet.innerText = printStyles;
+            document.head.appendChild(styleSheet);
+        }
+
+        // Add event listener for print button
+        document.querySelector('.action-button[onclick="handlePrint()"]').addEventListener('click', handlePrint);
+
+        // Add event listener for before print
+        window.addEventListener('beforeprint', () => {
+            setupPrintStyles();
+        });
+
+        // Add event listener for after print
+        window.addEventListener('afterprint', () => {
+            const printStyles = document.querySelector('style[type="text/css"]');
+            if (printStyles) {
+                printStyles.remove();
+            }
+        });
+    </script>
+</body>
+</html> 

@@ -20,8 +20,14 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#certifications">Certifications</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="cv.html" download="Beenyaa_Bilee_CV.pdf">Beenyaa Bilee</a></li>
       </ul>
       <div class="nav-buttons">
+        <select id="language-selector" class="language-selector">
+          <option value="en">English</option>
+          <option value="om">Afaan Oromoo</option>
+          <option value="am">አማርኛ</option>
+        </select>
         <button onclick="toggleTheme()" class="theme-toggle">
           <i class="fas fa-moon"></i>
         </button>
@@ -50,29 +56,106 @@
 
   <main class="main-content">
     <!-- Hero section -->
-    <section class="hero" id="home">
-      <div class="hero-images">
-        <img src="image/profilic.jpg" alt="Profile Picture" class="profile-pic">
-        <div class="tech-icons">
-          <img src="image/oracle-icon.png" alt="Oracle" class="tech-icon animate-float">
-          <img src="image/python-icon.png" alt="Python" class="tech-icon animate-float delay-1">
-          <img src="image/sql-icon.png" alt="SQL" class="tech-icon animate-float delay-2">
-        </div>
-      </div>
+    <section id="hero" class="hero">
       <div class="hero-content">
-        <h1>Hi, I'm <span class="highlight">Begna Bile</span></h1>
-        <h2>BI Developer & Electrical and Computer Engineer</h2>
-        <p>I specialize in creating smart systems and BI solutions that drive business growth.</p>
+        <div class="profile-container">
+          <img src="image/profilic.jpg" alt="Begna Bile" class="profile-image">
+          <div class="intro-text">
+            <h1>Hi, I'm Begna Bile</h1>
+            <h2>BI Developer & Electrical and Computer Engineer</h2>
+            <p>I specialize in creating smart systems and BI solutions that drive business growth.</p>
+            <div class="hero-buttons">
+              <a href="files/cv.pdf" class="download-btn" download>Download CV</a>
+              <a href="#contact" class="cta-button">Get in Touch</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- About section -->
-    <section id="about">
+    <section id="about" class="about">
       <div class="about-content">
         <h2>About Me</h2>
-        <p>I am a passionate BI Developer and Electrical and Computer Engineer with expertise in Oracle Database Administration and Development. My journey in technology has been driven by a deep interest in data analytics and system optimization.</p>
-        <p>With a strong foundation in both hardware and software, I bring a unique perspective to solving complex problems. I specialize in creating efficient database solutions and developing business intelligence tools that help organizations make data-driven decisions.</p>
-        <p>My approach combines technical excellence with creative problem-solving, ensuring that every solution I deliver is both robust and user-friendly.</p>
+        <div class="about-tables">
+          <div class="about-table">
+            <h3>Personal Information</h3>
+            <table>
+              <tr>
+                <td><i class="fas fa-graduation-cap"></i> Education</td>
+                <td>BSc in Electrical and Computer Engineering</td>
+              </tr>
+              <tr>
+                <td><i class="fas fa-code"></i> Skills</td>
+                <td>Data Analysis, Visualization, System Design, Oracle DB, PL/SQL, Python</td>
+              </tr>
+              <tr>
+                <td><i class="fas fa-bullseye"></i> Goals</td>
+                <td>Creating innovative solutions that bridge technology and business needs</td>
+              </tr>
+            </table>
+          </div>
+          
+          <div class="experience-table">
+            <h3>Work Experience</h3>
+            <table>
+              <tr>
+                <td class="date">December 9, 2022 – December 30, 2023</td>
+                <td>
+                  <strong>GRADUATE TRAINEE IT</strong><br>
+                  <em>SIINQEE BANK S.C, Addis Ababa, Ethiopia</em><br>
+                  <ul>
+                    <li>Assist in System and Network Administration</li>
+                    <li>Support End-User Technical Issues</li>
+                    <li>Data Analysis and Reporting</li>
+                    <li>Participate in IT Projects</li>
+                    <li>Learn and Apply IT Security Practices</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td class="date">January 1, 2024 – July 7, 2024</td>
+                <td>
+                  <strong>JUNIOR PAYMENT AND SYSTEM ADMINISTRATOR</strong><br>
+                  <em>SIINQEE BANK S.C, Addis Ababa, Ethiopia</em><br>
+                  <ul>
+                    <li>Payment System Monitoring</li>
+                    <li>Support Payment Integrations</li>
+                    <li>Investigate Payment Issues</li>
+                    <li>Security Compliance</li>
+                    <li>Generate Payment Reports</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td class="date">July 8, 2024 – January 31, 2025</td>
+                <td>
+                  <strong>JUNIOR BI DEVELOPER</strong><br>
+                  <em>SIINQEE BANK S.C, Addis Ababa, Ethiopia</em><br>
+                  <ul>
+                    <li>Assisted in developing BI solutions and reports</li>
+                    <li>Participated in data analysis and visualization projects</li>
+                    <li>Supported database maintenance and optimization</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td class="date">February 1, 2025 – Present</td>
+                <td>
+                  <strong>ASSOCIATE BUSINESS INTELLIGENCE DEVELOPER</strong><br>
+                  <em>SIINQEE BANK S.C, Addis Ababa, Ethiopia</em><br>
+                  <ul>
+                    <li>Developing and maintaining BI solutions and reports</li>
+                    <li>Data analysis and visualization for business insights</li>
+                    <li>Database optimization and performance tuning</li>
+                    <li>Collaborating with business units to understand requirements</li>
+                    <li>Implementing data-driven solutions for business growth</li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -83,32 +166,8 @@
         <h2>Skills</h2>
         <div class="skills-container">
           <div class="skill-card">
-            <i class="fab fa-html5 fa-3x"></i>
-            <h3>HTML5</h3>
-          </div>
-          <div class="skill-card">
-            <i class="fab fa-css3-alt fa-3x"></i>
-            <h3>CSS3</h3>
-          </div>
-          <div class="skill-card">
-            <i class="fab fa-js fa-3x"></i>
-            <h3>JavaScript</h3>
-          </div>
-          <div class="skill-card">
-            <i class="fab fa-react fa-3x"></i>
-            <h3>React</h3>
-          </div>
-          <div class="skill-card">
             <i class="fas fa-database fa-3x"></i>
             <h3>Oracle DB</h3>
-          </div>
-          <div class="skill-card">
-            <i class="fas fa-network-wired fa-3x"></i>
-            <h3>Networking</h3>
-          </div>
-          <div class="skill-card">
-            <i class="fas fa-database fa-3x"></i>
-            <h3>SQL</h3>
           </div>
           <div class="skill-card">
             <i class="fas fa-code fa-3x"></i>
@@ -118,6 +177,18 @@
             <i class="fab fa-python fa-3x"></i>
             <h3>Python</h3>
           </div>
+          <div class="skill-card">
+            <i class="fas fa-network-wired fa-3x"></i>
+            <h3>Networking</h3>
+          </div>
+          <div class="skill-card">
+            <i class="fas fa-chart-line fa-3x"></i>
+            <h3>Data Analysis</h3>
+          </div>
+          <div class="skill-card">
+            <i class="fas fa-chart-bar fa-3x"></i>
+            <h3>Data Visualization</h3>
+          </div>
         </div>
       </div>
 
@@ -126,16 +197,16 @@
         <h2>Projects</h2>
         <div class="projects-grid">
           <div class="project-card">
-            <i class="fas fa-door-open fa-4x"></i>
-            <h3>IoT Smart Door System</h3>
-            <p>Designed a smart IoT-based home door security system.</p>
-            <a href="#" class="project-link">View Project</a>
-          </div>
-          <div class="project-card">
             <i class="fas fa-chart-line fa-4x"></i>
             <h3>Internal BI Reporting</h3>
             <p>Developed Oracle BI reports and dashboards for Siinqee Bank.</p>
             <a href="#" class="project-link">View Report</a>
+          </div>
+          <div class="project-card">
+            <i class="fas fa-database fa-4x"></i>
+            <h3>Database Optimization</h3>
+            <p>Implemented performance improvements for banking systems.</p>
+            <a href="#" class="project-link">View Details</a>
           </div>
         </div>
       </div>
@@ -163,33 +234,9 @@
           <div class="certification-card">
             <i class="fas fa-certificate fa-4x"></i>
             <div class="certification-content">
-              <h3>Financial Inclusion</h3>
-              <p>Fintech and banking solutions</p>
-              <a href="files/finance-cert.pdf" download class="certification-link">View</a>
-            </div>
-          </div>
-          <div class="certification-card">
-            <i class="fas fa-certificate fa-4x"></i>
-            <div class="certification-content">
               <h3>Data Analytics</h3>
               <p>Advanced data analysis techniques</p>
               <a href="files/data-analytics-cert.pdf" download class="certification-link">View</a>
-            </div>
-          </div>
-          <div class="certification-card">
-            <i class="fas fa-certificate fa-4x"></i>
-            <div class="certification-content">
-              <h3>Google Digital Marketing</h3>
-              <p>Digital marketing strategies</p>
-              <a href="files/google-marketing-cert.pdf" download class="certification-link">View</a>
-            </div>
-          </div>
-          <div class="certification-card">
-            <i class="fas fa-certificate fa-4x"></i>
-            <div class="certification-content">
-              <h3>AI Fundamentals</h3>
-              <p>Artificial Intelligence basics</p>
-              <a href="files/ai-fundamentals-cert.pdf" download class="certification-link">View</a>
             </div>
           </div>
         </div>
@@ -243,6 +290,15 @@
         <button type="submit" class="submit-btn">Send Message</button>
       </form>
     </section>
+
+    <div class="cv-buttons">
+        <button class="action-button" onclick="window.open('cv.html', '_blank')">
+            <i class="fas fa-print"></i> Print CV
+        </button>
+        <button class="action-button" onclick="window.open('cv.html', '_blank')">
+            <i class="fas fa-download"></i> Download CV
+        </button>
+    </div>
   </main>
 
   <footer>
